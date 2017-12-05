@@ -1,5 +1,8 @@
 def accesoCasosTexttest(matrizCasosTest, rutaAccesoFichero):
-
+"""Este programa recibe como variables una matriz vacía y una ruta de acceso en forma de string,
+este esta preparado para determinar si dicha ruta existe sino dará un error donde la búsqueda no encontró nada
+o lo que le des no este bien escrito.
+finalmente te devolverá una matriz que sera una tupla compuestas de listas en su interior"""
     try:
         if not isinstance(rutaAccesoFichero, str):
             raise ValueError
@@ -28,7 +31,8 @@ def accesoCasosTexttest(matrizCasosTest, rutaAccesoFichero):
 
 
 def crearFicheroCasosTest(ficheroVolcadoCasosTest, matrizCasosTest):
-
+""" crea un nuevo documento llamado 'stdout' al cual guardar en memoria todos los
+datos obtenidos de matrizCasosTest(creada anteriormente) """
     try:
         if not isinstance(ficheroVolcadoCasosTest, str):
             raise ValueError
@@ -44,6 +48,7 @@ def crearFicheroCasosTest(ficheroVolcadoCasosTest, matrizCasosTest):
 
 
 def mostrarCasosTest(matrizCasosTest):
+""" muestra en pantalla los datos obtenidos de matrizCasosTest """
 
     for (offset, casosTestDia) in enumerate(matrizCasosTest):
         print('-' * 5 + " Dia %d: " % offset + '-' * 5)
